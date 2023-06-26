@@ -8,6 +8,5 @@ pub fn rick_and_morty_api_character(character_id: String) -> Character {
 }
 
 pub fn rick_and_morty_api_character_two(character_id: String) -> Result<Character, CustomError> {
-    println!("mod service ID {}", character_id);
     single_character_service::rick_and_morty_call_api_character_two(character_id)
 }

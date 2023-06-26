@@ -37,7 +37,6 @@ pub fn rick_and_morty_call_api_character_two(
     let mut status_code = 404;
     let mut status_message: String = "NOT FOUND".to_string();
     let url_string = format!("{}{}", URL_CHARACTER, character_id);
-    println!("URL: {}", url_string);
 
     let response = std::thread::spawn(move || {
         let resp = get(&url_string).map_err(|err| CustomError {
